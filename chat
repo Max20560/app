@@ -1,0 +1,25 @@
+class ChatScreen extends StatelessWidget {
+  final List<String> chats = [
+    "Tennisverein Chat",
+    "Trainer Max",
+    "Freund Lukas",
+    "Freundin Anna"
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Chat")),
+      body: ListView.builder(
+        itemCount: chats.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: Icon(Icons.chat_bubble_outline),
+            title: Text(chats[index]),
+            subtitle: Text("Letzte Nachricht anzeigen..."),
+          );
+        },
+      ),
+    );
+  }
+}
