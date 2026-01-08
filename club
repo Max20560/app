@@ -1,0 +1,27 @@
+class ClubScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Club")),
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Tennisverein Grün-Weiß",
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+            SizedBox(height: 10),
+            Text("Mitglieder: 128"),
+            Text("Nächstes Training: Freitag 18:00"),
+            Text("Trainer: Max Mustermann"),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Vereinsnews anzeigen"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
